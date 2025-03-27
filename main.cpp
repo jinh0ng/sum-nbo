@@ -21,14 +21,14 @@ int main(int argc, char **argv)
 		FILE *fp = fopen(argv[i], "rb");
 		if (!fp)
 		{
-			fprintf(stderr, "Error: 파일 '%s'을 열 수 없음음.\n", argv[i]);
+			fprintf(stderr, "Error: 파일 '%s'을 열 수 없음.\n", argv[i]);
 			return 1;
 		}
 
 		uint32_t num;
 		if (fread(&num, sizeof(uint32_t), 1, fp) != 1)
 		{
-			fprintf(stderr, "Error: 파일 '%s'에서 4바이트를 읽지 못함함.\n", argv[i]);
+			fprintf(stderr, "Error: 파일 '%s'에서 4바이트를 읽지 못함.\n", argv[i]);
 			fclose(fp);
 			return 1;
 		}
